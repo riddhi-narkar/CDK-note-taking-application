@@ -2,10 +2,13 @@ import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { Entity, Table } from 'dynamodb-onetable';
 import Dynamo from 'dynamodb-onetable/Dynamo';
 
+// We utilize OneTable is a tool for managing DynamoDB queries.
+// It helps several different entities to be modeled in the same DynamoDB table.
+
+// Initialize DB
 const client = new Dynamo({ client: new DynamoDBClient({}) });
-/**
- * Generated this with Dynobase - https://dynobase.dev/
- */
+
+// Schema
 const schema = {
   indexes: {
     primary: {

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { CdkThreeTierServerlessStack } from '../lib/cdk-three-tier-serverless-stack';
+import { CcProjectStack } from '../lib/cc-project-stack';
 
 const app = new cdk.App();
-new CdkThreeTierServerlessStack(app, 'CdkThreeTierServerlessStack', {
+new CcProjectStack(app, 'CcProjectStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
